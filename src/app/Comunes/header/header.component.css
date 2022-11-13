@@ -1,0 +1,12 @@
+
+.navbar form{
+    display:inline-flex;
+    justify-content:end;
+    margin-left:auto;
+}
+
+.form-control{
+    padding: 5px 5px;
+    width: 200px;
+    height: 40px;
+}

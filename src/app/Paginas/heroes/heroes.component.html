@@ -1,0 +1,19 @@
+<div class="container">
+    <p class="h3"> <strong>Héroes</strong><small> Marvel y DC</small> </p>
+    <div class="row row-cols-3 col-md-10" >
+        <div *ngFor="let item of Heroes">
+            <div class="coll">
+                <div class="card" style="width: 18rem;">
+                    <img src={{item.img}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.nombre}}</h5>
+                      <p class="card-text">{{item.bio}}</p>
+                      <p><small><small>{{item.aparicion}}</small></small></p>
+                      <a href="#" [routerLink] = "['/heroe', item.id]" class="btn btn-outline-secondary  ">Ver más...</a>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+</div>

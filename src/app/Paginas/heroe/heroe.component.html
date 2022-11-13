@@ -1,0 +1,28 @@
+
+<div class="container ">
+    <div class="row row-cols-2 justify-content-center">
+        <div class="col-md-3 ">
+            <p> <br/> </p>
+            <h1 style="display: inline;">{{nombreDetalle.toUpperCase()}}</h1> 
+            <h1 style="display: inline; font-size: 25px;"> ({{aparicionDetalle.substring(0,4)}})</h1>
+            <h1> <img src={{imgDetalle}} style="width:300px; height:300px;"> </h1>
+            <a href="" class="btn btn-outline-danger" style="width:300px; height:40px;">Regresar</a>
+        </div>
+        <div class="coll">
+            <p><br/><br/><br/><br/></p>
+            <p class="h3"> {{nombreDetalle}} </p>
+            <hr size="2px" color="black" />
+            <P> {{bioDetalle}}</P>
+            <ng-container 
+                        *ngIf="casaDetalle == 'DC'; then DC; else Marvel"> <!--Creamos la condición-->
+                    </ng-container>
+                    <ng-template #DC> <!--then-->
+                        <img src= "assets/img/DC.jpg" style="width:300px; height:300px;" alt="DC">
+                    </ng-template>
+                    <ng-template #Marvel> <!--else-->
+                        <img src= "assets/img/marvel.png" style="width:400px; height:400px; margin-top:-70px;" alt="Marvel">
+                    </ng-template>
+        </div>
+    </div>
+</div>
+
